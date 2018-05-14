@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="item_margin_left">@dimen/dimen_8</dimen>
+    <dimen name="item_margin_right">@dimen/dimen_8</dimen>
+    <dimen name="item_margin_top">@dimen/dimen_8</dimen>
+    <dimen name="item_margin_bottom">@dimen/dimen_8</dimen>
+    <dimen name="item_padding_left">@dimen/dimen_8</dimen>
+    <dimen name="item_padding_right">@dimen/dimen_8</dimen>
+    <dimen name="item_padding_top">@dimen/dimen_8</dimen>
+    <dimen name="item_padding_bottom">@dimen/dimen_8</dimen>
+    
+    <dimen name="content_margin_left">@dimen/dimen_8</dimen>
+    <dimen name="content_margin_right">@dimen/dimen_8</dimen>
+    <dimen name="content_margin_top">@dimen/dimen_8</dimen>
+    <dimen name="content_margin_bottom">@dimen/dimen_8</dimen>
+    <dimen name="content_padding_left">@dimen/dimen_8</dimen>
+    <dimen name="content_padding_right">@dimen/dimen_8</dimen>
+    <dimen name="content_padding_top">@dimen/dimen_8</dimen>
+    <dimen name="content_padding_bottom">@dimen/dimen_8</dimen>
+
+    <dimen name="text_vertical_space">10dp</dimen>
+    <dimen name="text_horizontal_space">10dp</dimen>
+    <!--====================================================
+    为统一风格 不期望直接访问下面的值
+    使用时先在上面定义   后引用下面的值
+    ===================================================-->
+    <dimen name="dimen_4">4dp</dimen>
+    <dimen name="dimen_5">5dp</dimen>
+    <dimen name="dimen_6">6dp</dimen>
+    <dimen name="dimen_7">7dp</dimen>
+    <dimen name="dimen_8">8dp</dimen>
+    <dimen name="dimen_9">9dp</dimen>
+    <dimen name="dimen_10">10dp</dimen>
+    <dimen name="dimen_11">11dp</dimen>
+    <dimen name="dimen_12">12dp</dimen>
+    <dimen name="dimen_13">13dp</dimen>
+    <dimen name="dimen_14">14dp</dimen>
+    <dimen name="dimen_15">15dp</dimen>
+    <dimen name="dimen_16">16dp</dimen>
+    <dimen name="dimen_17">17dp</dimen>
+    <dimen name="dimen_18">18dp</dimen>
+    <dimen name="dimen_19">19dp</dimen>
+    <dimen name="dimen_20">20dp</dimen>
+    <dimen name="dimen_21">21dp</dimen>
+    <dimen name="dimen_22">22dp</dimen>
+    <dimen name="dimen_23">23dp</dimen>
+    <dimen name="dimen_24">24dp</dimen>
+</resources>

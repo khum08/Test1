@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--====================================================
+    字体比较杂的放这里
+   ===================================================-->
+    <style name="TitleCommon" parent="WrapHeight">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/text_normal</item>
+    </style>
+</resources>

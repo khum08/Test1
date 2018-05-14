@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--====================================================
+    比较杂的放这个文件
+   ===================================================-->
+    <dimen name="app_bar_height">12sp</dimen>
+    <dimen name="font_13.3">13.3sp</dimen>
+    <dimen name="font_14">14sp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+
+
+</resources>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--showAsAction always代表固定在右上角 never要点击后才出现，点击的效果不好
+        ifroom为编译器推荐
+        title必须写
+        最佳实践如下：点击后弹popmenu
+    -->
+    <item
+        android:id="@+id/text1"
+        android:icon="@drawable/ic_share_black_24dp"
+        android:title="share"
+        app:showAsAction="ifRoom"
+        />
+    <item
+        android:id="@+id/text"
+        android:title="more"
+        android:icon="@drawable/ic_more_vert_black_24dp"
+        app:showAsAction="ifRoom"/>
+</menu>

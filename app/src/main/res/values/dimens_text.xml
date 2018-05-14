@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--=================字体大小====================-->
+    <dimen name="text_normal">@dimen/text_size16</dimen>
+    <dimen name="text_title">@dimen/text_size18</dimen>
+    <dimen name="text_hint">@dimen/text_size14</dimen>
+
+    <!--====================================================
+    为统一风格 不期望直接访问下面的值
+    使用时先在上面定义   后引用下面的值
+    ===================================================-->
+    <dimen name="text_size8">8sp</dimen>
+    <dimen name="text_size9">9sp</dimen>
+    <dimen name="text_size10">10sp</dimen>
+    <dimen name="text_size11">11sp</dimen>
+    <dimen name="text_size12">12sp</dimen>
+    <dimen name="text_size13">13sp</dimen>
+    <dimen name="text_size14">14sp</dimen>
+    <dimen name="text_size15">15sp</dimen>
+    <dimen name="text_size16">16sp</dimen>
+    <dimen name="text_size17">17sp</dimen>
+    <dimen name="text_size18">18sp</dimen>
+    <dimen name="text_size19">19sp</dimen>
+    <dimen name="text_size20">20sp</dimen>
+    <dimen name="text_size21">21sp</dimen>
+    <dimen name="text_size22">22sp</dimen>
+    <dimen name="text_size24">24sp</dimen>
+</resources>
