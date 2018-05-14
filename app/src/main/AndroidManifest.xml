@@ -37,6 +37,8 @@
         </activity>
         <activity android:name=".widget.WidgetActivity">
         </activity>
+        <activity android:name=".widget.ChartActivity">
+        </activity>
     </application>
 
 </manifest>

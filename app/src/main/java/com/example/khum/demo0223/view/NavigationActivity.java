@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.example.khum.demo0223.R;
+import com.example.khum.demo0223.widget.ChartActivity;
 import com.example.khum.demo0223.widget.WidgetActivity;
 
 /**
@@ -28,6 +29,12 @@ public class NavigationActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(NavigationActivity.this, WidgetActivity.class));
+            }
+        });
+        findViewById(R.id.chart).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(NavigationActivity.this,ChartActivity.class));
             }
         });
 
