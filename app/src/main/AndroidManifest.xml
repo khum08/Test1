@@ -3,6 +3,9 @@
           package="com.example.khum.demo0223">
 
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -11,6 +14,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <!--sophix热修复-->
+        <meta-data
+            android:name="com.taobao.android.hotfix.IDSECRET"
+            android:value="24899430"/>
+        <meta-data
+            android:name="com.taobao.android.hotfix.APPSECRET"
+            android:value="9fe262c95b2a43add62cbd55fe7a10ee"/>
+        <meta-data
+            android:name="com.taobao.android.hotfix.RSASECRET"
+            android:value="MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDDIxpbLp0ebjGCZI0wyyp+qYY7HsS4P8/n+ik3eYLjmORKjtcpmfloX6R7re2NGN6qHGDc5jkzSYufdIGcUeluW+KvJf1D6LoJYAsCkPjQ4Y/qkIcrimQ4Q5VZrZeeAu7GOcjC0mO5uS9JL9/nLHRGdv76BwwIzDRCfC8cpYPliwMGDCSFJlCHFijaWUoGBZ6W8LP+mYSRsVQT00/NHtwZQNb+CXbcwa+AZofBl8ZXaK6Bkio+q3eLXWWRWtsWqqPJkDDz91pta5JwlQRtNnFnDz4gwkD91DEQHsnKXetjJpRzgNKQ2l7CKjcCPAs5gmwh8R8w7hdykwRcTPkyjCR7AgMBAAECggEBALG5geK0JMO3Zv40aGedUpnD+o5T6qVI8Sl9rRZqZCy4bov9ZrfsFbzbByrh8S6GDR5v9EScplIw1Kqo6Pcfn3Q02dPdzLqR9wZc5Ao1UXilR3dCpOmiBL89xoPD2AhA8Ym2zUOrbMqVgByvLsUUtt4KuRWtX2eP3LUE97+me+eNyex6KYJWJ3l7leOWOxaL+1SgERrEoc/OwWMA5UNJ/SrmPM6sOiKF7Mt96yBunYD5BlRqGc2+InYkYNv0YV91TfiysHdArm2FeK+nJqafOxsM5vh6uIK3qI72JLBJ2MzzktuFIwutQgtjYi2/4Ay39rxx08hVF8EDC3BOoebguzkCgYEA6blz7+tkkoIKlqPHCmQFeznDh8P2l4kOwCDMVwnhAv82nSHVdy/TfqsAfMyuv5kX8/QE8i6UpU7oNuWkVnDyHrGtfhOYWyXHt8uGy5VesDtJzJ+f1o84rAOHz/HHOS1dbbTNKN+dDexvHnIwenbsV73HuDPrZKTJcQ68URpSpr8CgYEA1bwslHbCxtW/Oig2J4sEGxwKDVmFm9sbIjrxN6DnUmaahd9oIqk++rbo+dRhTNfKBHdF9ChLwzPP4BV3soAqDttiLmSFHBVNPA/uaPT7aMrx8MsA4YLsXCbhyM8p5R7EAE6zmbMo3hQQWAvepPib8MzcINWKVIZdgZEfm+USjUUCgYBjbL/UFPfAl083y831Lp1iUS1LiOJSjjxXINysPgiZRMYPy//J5u96V/YqIMxJty+IWIruF0Cmnc2M5N2m4/8rbXwXQPCz/XtbRVo/KniQUXhQcqsFFAIQsqPIotqUCSdQbvRDafSeorCWbA8RWZuqq5HVW0jMlIkY7iLQAXmdcwKBgDF1Gqe8F3QlL9vIREfALlILmfPe3EDlYZD5LKofrIdvwJ/rw1AJ883WF3EACQfcAx4nb2OBE4725UpIDWubpp/LehucHQUTlMyqLxPQZICqPXPntat5PTJRuPtbnKktBlO/4mVVhMZmxCVrkbiA4qzE6scaQqkucmKx7yuGxVU1AoGBANy8+55jypxeMIvhR6tD0t2Qohxl2zc7pb4Dm+3HKaCLJOs8bMk6s57PHRPkFxC+JQEoyxhh0IWMZ+VLpFfLFBILENSCrvzDgykvpj8rZMIR5JwU/N/0g3WmfSQRxaIWQNFofvDo4FpsAmexWcom7bF8PZhGhDOsGTohWJjrXKN0"/>
+
         <activity android:name=".MainActivity">
         </activity>
         <activity
@@ -38,6 +53,10 @@
         <activity android:name=".widget.WidgetActivity">
         </activity>
         <activity android:name=".widget.ChartActivity">
+        </activity>
+        <activity android:name=".hotfix.SophixActivity">
+        </activity>
+        <activity android:name=".view.SweepHorizontalActivity">
         </activity>
     </application>
 

@@ -14,11 +14,18 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            manifestPlaceholders = [APP_NAME: "测试APP"]
+
         }
     }
     compileOptions {
         targetCompatibility 1.8
         sourceCompatibility 1.8
+    }
+    repositories {
+        maven {
+            url "http://maven.aliyun.com/nexus/content/repositories/releases"
+        }
     }
 }
 
@@ -32,4 +39,6 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     compile 'com.mcxiaoke.volley:library:1.0.19'
     compile 'com.github.barteksc:android-pdf-viewer:2.8.2'
+    //阿里热修复
+    compile 'com.aliyun.ams:alicloud-android-hotfix:3.2.2'
 }
