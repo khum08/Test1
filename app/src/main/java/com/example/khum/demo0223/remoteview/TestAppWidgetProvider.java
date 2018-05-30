@@ -6,7 +6,7 @@ import android.appwidget.AppWidgetProvider;
  * <pre>
  *     author : khum
  *     time   : 2018/5/22
- *     desc   :
+ *     desc   : remoteview测试
  * </pre>
  */
 public class TestAppWidgetProvider extends AppWidgetProvider {

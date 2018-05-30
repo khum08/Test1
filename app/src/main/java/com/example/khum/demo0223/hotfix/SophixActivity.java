@@ -6,6 +6,9 @@ import android.widget.TextView;
 
 import com.example.khum.demo0223.R;
 
+/**
+ * 热修复框架测试
+ */
 public class SophixActivity extends AppCompatActivity {
 
     @Override

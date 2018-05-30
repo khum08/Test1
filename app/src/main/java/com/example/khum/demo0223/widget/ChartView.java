@@ -24,7 +24,7 @@ public class ChartView extends View {
 
     private Paint mPaint;
     private Canvas mCanvas;
-    private int mCX = 600;
+    private int mCX = 400;
     private int mCY = 500;
     private int mCR = 300;
     private static final String TAG = "ChartView";
@@ -65,6 +65,13 @@ public class ChartView extends View {
         mHeight = MeasureSpec.getSize(widthMeasureSpec);
     }
 
+    /**
+     * 此方法在onMeasure之后，onLayout之前
+     * @param w
+     * @param h
+     * @param oldw
+     * @param oldh
+     */
     @Override
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         super.onSizeChanged(w, h, oldw, oldh);

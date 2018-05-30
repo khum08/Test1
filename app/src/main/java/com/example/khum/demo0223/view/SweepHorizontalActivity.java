@@ -15,6 +15,10 @@ import com.example.khum.demo0223.R;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 水平滑动的recyclerView
+ */
+
 public class SweepHorizontalActivity extends AppCompatActivity {
 
     private RecyclerView recyclerview;
@@ -31,10 +35,10 @@ public class SweepHorizontalActivity extends AppCompatActivity {
         recyclerview = (RecyclerView) findViewById(R.id.recyclerview);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
-        //recyclerview.setLayoutManager(layoutManager);
+        recyclerview.setLayoutManager(layoutManager);
 
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this,5);
-        recyclerview.setLayoutManager(gridLayoutManager);
+//        recyclerview.setLayoutManager(gridLayoutManager);
         initData();
         myAdapter myAdapter = new myAdapter(data);
         recyclerview.setAdapter(myAdapter);

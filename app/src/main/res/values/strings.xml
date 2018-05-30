@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Demo0223</string>
+    <string name="app_name">练习DEMO</string>
     <string name="title_activity_my_scrolling">MyScrollingActivity</string>
     <string name="large_text"></string>
     <string name="action_settings">Settings</string>

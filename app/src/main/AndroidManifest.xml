@@ -13,7 +13,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:hardwareAccelerated="false"
+        >
 
         <!--sophix热修复-->
         <meta-data
@@ -58,6 +60,9 @@
         </activity>
         <activity android:name=".view.SweepHorizontalActivity">
         </activity>
+        <activity android:name=".widget.pathpractice.PathActivity"/>
+        <activity android:name=".widget.pathpractice.Path1Activity"/>
+        <activity android:name=".widget.pathpractice.Path2Activity"/>
     </application>
 
 </manifest>

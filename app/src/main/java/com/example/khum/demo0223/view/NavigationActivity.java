@@ -10,6 +10,7 @@ import com.example.khum.demo0223.R;
 import com.example.khum.demo0223.hotfix.SophixActivity;
 import com.example.khum.demo0223.widget.ChartActivity;
 import com.example.khum.demo0223.widget.WidgetActivity;
+import com.example.khum.demo0223.widget.pathpractice.PathActivity;
 
 /**
  * <pre>
@@ -50,6 +51,13 @@ public class NavigationActivity extends AppCompatActivity {
                 startActivity(new Intent(NavigationActivity.this,SweepHorizontalActivity.class));
             }
         });
+        findViewById(R.id.path_practice).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(NavigationActivity.this, PathActivity.class));
+            }
+        });
+
 
     }
 }
