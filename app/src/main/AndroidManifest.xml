@@ -6,6 +6,9 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+<!--
+    <uses-permission android:name="android.permission.BIND_ACCESSIBILITY_SERVICE"/>
+-->
 
     <application
         android:allowBackup="true"
@@ -15,8 +18,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:hardwareAccelerated="false"
+        android:sharedUserId="android.uid.system"
         >
-
         <!--sophix热修复-->
         <meta-data
             android:name="com.taobao.android.hotfix.IDSECRET"
@@ -63,6 +66,20 @@
         <activity android:name=".widget.pathpractice.PathActivity"/>
         <activity android:name=".widget.pathpractice.Path1Activity"/>
         <activity android:name=".widget.pathpractice.Path2Activity"/>
+        <activity android:name=".view.WeChatMonitorActivity"/>
+
+        <service android:name=".service.MonitorService"
+                 android:enabled="true"
+                 android:exported="true"
+                 android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action
+                    android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/my_service_config" />
+        </service>
     </application>
 
 </manifest>

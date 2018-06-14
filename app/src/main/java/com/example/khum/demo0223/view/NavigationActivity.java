@@ -58,6 +58,13 @@ public class NavigationActivity extends AppCompatActivity {
             }
         });
 
+        findViewById(R.id.wechat).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(NavigationActivity.this,WeChatMonitorActivity.class));
+            }
+        });
+
 
     }
 }

@@ -18,4 +18,7 @@
     <string name="logout">退出登录</string>
     <string name="phone">手机号</string>
     <string name="password">密码</string>
+    <string name="auto_reply_description">service</string>
+
+
 </resources>

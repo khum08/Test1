@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_listener"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="开始监听"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        android:padding="@dimen/dimen_10"
+        android:layout_marginTop="100dp"
+        android:background="@android:color/darker_gray"
+        />
+    <TextView
+        android:id="@+id/tv_permission"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="有权限吗"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        android:padding="@dimen/dimen_10"
+        android:layout_marginTop="100dp"
+        android:background="@android:color/darker_gray"
+        />
+    <TextView
+        android:id="@+id/tv_get"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="申请权限"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        android:padding="@dimen/dimen_10"
+        android:layout_marginTop="100dp"
+        android:background="@android:color/darker_gray"
+        />
+
+</LinearLayout>
