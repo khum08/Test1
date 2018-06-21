@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">OpenSqlcipher</string>
+    <string name="app_name">WeChatMonitor</string>
+
+    <string name="setting_update_title">自动监听</string>
+    <string name="setting_update_on">开启</string>
+    <string name="setting_update_off">关闭</string>
 </resources>

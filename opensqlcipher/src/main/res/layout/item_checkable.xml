@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:id="@+id/tv_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="自动监听"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="10dp"
+        android:paddingTop="10dp"
+        android:textSize="16sp"
+        android:paddingBottom="4dp"
+        />
+    <TextView
+        android:id="@+id/tv_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="关闭"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_top"
+        app:layout_constraintTop_toBottomOf="@+id/tv_top"
+        android:paddingBottom="10dp"
+        android:textSize="14sp"
+        />
+
+    <android.support.v7.widget.AppCompatCheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_top"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_bottom"
+        android:padding="6dp"
+        android:clickable="false"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e5e5e5"
+        app:layout_constraintTop_toBottomOf="@+id/tv_bottom"
+        />
+
+
+</android.support.constraint.ConstraintLayout>

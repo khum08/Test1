@@ -1,4 +1,4 @@
-package com.kotlin.khum.opensqlcipher;
+package com.kotlin.khum.opensqlcipher.utils;
 
 import android.util.Log;
 

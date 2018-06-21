@@ -1,4 +1,4 @@
-package com.kotlin.khum.opensqlcipher;
+package com.kotlin.khum.opensqlcipher.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -6,13 +6,23 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import com.kotlin.khum.opensqlcipher.R;
+import com.kotlin.khum.opensqlcipher.utils.SystemManager;
+
 import net.sqlcipher.Cursor;
 import net.sqlcipher.database.SQLiteDatabase;
 import net.sqlcipher.database.SQLiteDatabaseHook;
 
 import java.io.File;
 
-public class MainActivity extends AppCompatActivity {
+/**
+ * <pre>
+ *     author : khum
+ *     time   : 2018/6/14
+ *     desc   : 测试页面
+ * </pre>
+ */
+public class TestActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
     private final String SDcardPath = "/data/data/com.tencent.mm/MicroMsg/aece1b7c52374c77ae049ed79e3d1fc0/";
@@ -20,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_test);
 
         String apkRoot="chmod 777 "+getPackageCodePath();
         Log.e(TAG, "onCreate: "+getPackageCodePath() );
