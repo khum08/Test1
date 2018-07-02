@@ -11,19 +11,21 @@ public interface StaticField {
 
     String ShareFileName = "WECHAT_LISTEN";
     String AutoListen = "AUTO_LISTEN";
-    String tag = "Monitor";
+    String MONITOR_TAG = "Monitor";
     String serviceName = "com.kotlin.khum.opensqlcipher.service.WxMonitorService";
+
+    String ACTION_BROADCAST="LISTENER";
 
     //=============================== database =========================================
     int interval = 20000;
     String MessageDbName = "EnMicroMsg.db";
-    String DbKey = "fbdcffa";
-    String DbPath = "/data/data/com.tencent.mm/MicroMsg/aece1b7c52374c77ae049ed79e3d1fc0/";
+    String DbKey = "5e3e284";
+    String DbPath = "/data/data/com.tencent.mm/MicroMsg/c4d9ec279edb6b55b95420a64db0e223/";
 
     //================================ net =============================================
-    String NETTAG = "network";
+    String NET_TAG = "network";
     int DEFAULT_TIME_OUT = 10;
-    String baseUrl ="";
+    String baseUrl ="http://118.31.8.64:80/";
 
 
 }

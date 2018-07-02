@@ -1,8 +1,12 @@
 package com.kotlin.khum.opensqlcipher.net;
 
-import com.kotlin.khum.opensqlcipher.utils.StaticField;
+import android.util.Log;
+
+import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
+import com.kotlin.khum.opensqlcipher.enttity.RequestEntity;
 import com.kotlin.khum.opensqlcipher.net.interceptor.LogInterceptor;
 import com.kotlin.khum.opensqlcipher.net.interceptor.TransferInterceptor;
+import com.kotlin.khum.opensqlcipher.utils.StaticField;
 
 import java.util.concurrent.TimeUnit;
 
@@ -14,17 +18,18 @@ import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+import static com.kotlin.khum.opensqlcipher.utils.StaticField.NET_TAG;
+
 
 /**
  * <pre>
  *     author : khum
  *     time   : 2018/6/20
- *     desc   :
+ *     desc   : 网络服务
  * </pre>
  */
 public class RetrofitService {
 
-    private static Retrofit sRetrofit;
     private static ApiService sApi;
 
     public static void init(){
@@ -36,39 +41,49 @@ public class RetrofitService {
                 .readTimeout(StaticField.DEFAULT_TIME_OUT, TimeUnit.SECONDS)
                 .writeTimeout(StaticField.DEFAULT_TIME_OUT, TimeUnit.SECONDS)
                 .build();
-        sRetrofit = new Retrofit.Builder()
+        Retrofit sRetrofit = new Retrofit.Builder()
                 .baseUrl(StaticField.baseUrl)
                 .addConverterFactory(GsonConverterFactory.create())
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .client(okHttpClient)
                 .build();
         sApi = sRetrofit.create(ApiService.class);
     }
 
-    public static void uploadPricing(String data){
+    //上传数据
+    public static void uploadPricing(RequestEntity data){
+        if(sApi==null){
+            Log.d(NET_TAG, "uploadPricing: ");
+            init();
+        }
         sApi.uploadWxPricing(data)
                 .subscribeOn(Schedulers.io())
-                .unsubscribeOn(Schedulers.io())
-                .subscribeOn(AndroidSchedulers.mainThread())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Observer<NetResponse<String>>() {
                     @Override
                     public void onSubscribe(Disposable d) {
-
+                        Log.d(NET_TAG, "onSubscribe: ");
                     }
 
                     @Override
                     public void onNext(NetResponse<String> stringNetResponse) {
-
+                        Log.d(NET_TAG, "onNext: ");
+                        int code = stringNetResponse.getCode();
+                        if(code!=0){
+                            Log.d(NET_TAG,stringNetResponse.getCode()+stringNetResponse.getMessage());
+                        }else {
+                            Log.d(NET_TAG,"upload success");
+                        }
                     }
 
                     @Override
                     public void onError(Throwable e) {
-
+                        Log.e(NET_TAG,e.toString());
                     }
 
                     @Override
                     public void onComplete() {
-
+                        Log.d(NET_TAG, "onComplete: ");
                     }
                 });
     }

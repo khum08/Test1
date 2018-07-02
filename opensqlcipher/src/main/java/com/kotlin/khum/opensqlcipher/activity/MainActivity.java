@@ -54,11 +54,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(mRunning){
-                    stopService(new Intent(MainActivity.this,WxMonitorService.class));
+                    stopService(new Intent(getBaseContext(),WxMonitorService.class));
                     tv_state.setText("关闭");
                     mRunning = false;
                 }else{
-                    startService(new Intent(MainActivity.this,WxMonitorService.class));
+                    startService(new Intent(getBaseContext(),WxMonitorService.class));
                     tv_state.setText("监听中...");
                     mRunning = true;
                 }

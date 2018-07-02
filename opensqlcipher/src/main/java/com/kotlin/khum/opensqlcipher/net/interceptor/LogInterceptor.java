@@ -37,7 +37,7 @@ public class LogInterceptor implements Interceptor {
 
     //响应Log
     private void responseLog(Response response) {
-        Log.d(StaticField.NETTAG,
+        Log.d(StaticField.NET_TAG,
                 "\nresponseMessage:\n" + response.message() + "\n" +
                         "responseHeaders:\n" + response.headers().toString()+ "\n" +
                         "responseBody:\n"+ getResponseBody(response.body()));
@@ -45,7 +45,7 @@ public class LogInterceptor implements Interceptor {
 
     //请求Log
     private void requestLog(Request request) {
-        Log.d(StaticField.NETTAG,
+        Log.d(StaticField.NET_TAG,
                 "\nrequestURL:\n" + request.url() + "\n" +
                         "requestHeaders:\n" + request.headers().toString()+ "\n"+
                         "requestBody:\n" + getRequestBody(request.body()));

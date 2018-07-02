@@ -12,6 +12,15 @@ public class Message {
     private long createTime;
     private String content;
     private String talker;
+    private String nickName;
+
+    public String getNickName() {
+        return nickName;
+    }
+
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
+    }
 
     public long getCreateTime() {
         return createTime;
@@ -39,10 +48,11 @@ public class Message {
 
     @Override
     public String toString() {
-        return "Message{" +
+        return "{" +
                 "createTime=" + createTime +
                 ", content='" + content + '\'' +
                 ", talker='" + talker + '\'' +
+                ", nickName='" + nickName + '\'' +
                 '}';
     }
 }

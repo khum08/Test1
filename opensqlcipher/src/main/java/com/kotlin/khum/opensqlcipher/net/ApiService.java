@@ -1,6 +1,9 @@
 package com.kotlin.khum.opensqlcipher.net;
 
+import com.kotlin.khum.opensqlcipher.enttity.RequestEntity;
+
 import io.reactivex.Observable;
+import retrofit2.http.Body;
 import retrofit2.http.POST;
 
 /**
@@ -17,7 +20,7 @@ public interface ApiService {
      * @param data
      * @return
      */
-    @POST("/")
-    Observable<NetResponse<String>> uploadWxPricing(String data);
+    @POST("test")
+    Observable<NetResponse<String>> uploadWxPricing(@Body RequestEntity data);
 
 }

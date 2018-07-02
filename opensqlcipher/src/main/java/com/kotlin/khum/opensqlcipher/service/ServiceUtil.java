@@ -31,7 +31,7 @@ public class ServiceUtil {
 
         for (ActivityManager.RunningServiceInfo info : lists) {//判断服务
             if(info.service.getClassName().equals(serviceName)){
-                Log.i(StaticField.tag, ""+info.service.getClassName());
+                Log.i(StaticField.MONITOR_TAG, ""+info.service.getClassName());
                 isRunning = true;
             }
         }

@@ -19,9 +19,11 @@ public class TransferInterceptor implements Interceptor {
     @Override
     public Response intercept(Chain chain) throws IOException {
         Request request = chain.request();
-        Request.Builder requestBuilder = request.newBuilder().addHeader("Accept-Encoding", "gzip,deflate")
+        Request.Builder requestBuilder = request.newBuilder()
+                .addHeader("Accept-Encoding", "gzip,deflate")
                 .addHeader("Charset", "UTF-8")
-                .addHeader("system","android");
+                .addHeader("Content-Type","application/json")
+                .addHeader("Accept","application/json");
         Request newRequest = requestBuilder.build();
         return chain.proceed(newRequest);
     }

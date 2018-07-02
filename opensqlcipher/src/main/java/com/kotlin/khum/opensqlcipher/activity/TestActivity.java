@@ -25,7 +25,7 @@ import java.io.File;
 public class TestActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
-    private final String SDcardPath = "/data/data/com.tencent.mm/MicroMsg/aece1b7c52374c77ae049ed79e3d1fc0/";
+    private final String SDcardPath = "/data/data/com.tencent.mm/MicroMsg/c4d9ec279edb6b55b95420a64db0e223/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +43,7 @@ public class TestActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String makeDir = "mkdir /data/data/com.kotlin.khum.opensqlcipher/databases";
                 SystemManager.rootCommand(makeDir);
-                String moveCommond = "cp /data/data/com.tencent.mm/MicroMsg/aece1b7c52374c77ae049ed79e3d1fc0/EnMicroMsg.db /data/data/com.kotlin.khum.opensqlcipher/databases/EnMicroMsg.db";
+                String moveCommond = "cp /data/data/com.tencent.mm/MicroMsg/c4d9ec279edb6b55b95420a64db0e223/EnMicroMsg.db /data/data/com.kotlin.khum.opensqlcipher/databases/EnMicroMsg.db";
                 SystemManager.rootCommand(moveCommond);
             }
         });
