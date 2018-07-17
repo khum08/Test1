@@ -20,7 +20,7 @@ public interface ApiService {
      * @param data
      * @return
      */
-    @POST("test")
+    @POST("upload")
     Observable<NetResponse<String>> uploadWxPricing(@Body RequestEntity data);
 
 }

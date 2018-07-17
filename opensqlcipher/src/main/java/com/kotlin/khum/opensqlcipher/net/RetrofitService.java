@@ -32,8 +32,11 @@ public class RetrofitService {
 
     private static ApiService sApi;
 
+    private static String lastUrl = "";
+    private static OkHttpClient okHttpClient;
+
     public static void init(){
-        OkHttpClient okHttpClient = new OkHttpClient.Builder()
+        okHttpClient = new OkHttpClient.Builder()
                 .retryOnConnectionFailure(true)
                 .addInterceptor(new TransferInterceptor())
                 .addInterceptor(new LogInterceptor())
@@ -41,8 +44,14 @@ public class RetrofitService {
                 .readTimeout(StaticField.DEFAULT_TIME_OUT, TimeUnit.SECONDS)
                 .writeTimeout(StaticField.DEFAULT_TIME_OUT, TimeUnit.SECONDS)
                 .build();
+        initRetrofit(StaticField.baseUrl);
+    }
+
+    //
+    private static void initRetrofit(String url) {
+        sApi = null;
         Retrofit sRetrofit = new Retrofit.Builder()
-                .baseUrl(StaticField.baseUrl)
+                .baseUrl(url)
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .client(okHttpClient)
@@ -50,8 +59,13 @@ public class RetrofitService {
         sApi = sRetrofit.create(ApiService.class);
     }
 
+
     //上传数据
-    public static void uploadPricing(RequestEntity data){
+    public static void uploadPricing(String url,RequestEntity data){
+        if(!url.equals(lastUrl)){
+            initRetrofit(url);
+            lastUrl = url;
+        }
         if(sApi==null){
             Log.d(NET_TAG, "uploadPricing: ");
             init();

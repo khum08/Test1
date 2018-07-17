@@ -3,6 +3,7 @@ package com.kotlin.khum.opensqlcipher;
 import android.app.Application;
 
 import com.kotlin.khum.opensqlcipher.net.RetrofitService;
+import com.kotlin.khum.opensqlcipher.utils.StaticField;
 
 /**
  * <pre>
@@ -12,6 +13,16 @@ import com.kotlin.khum.opensqlcipher.net.RetrofitService;
  * </pre>
  */
 public class App extends Application {
+
+    /**
+     * 是否自动发送
+     */
+    public static boolean autoSend = true;
+
+    /**
+     * 服务器的baseUrl
+     */
+    public static String serverUrl = StaticField.baseUrl;
 
     @Override
     public void onCreate() {

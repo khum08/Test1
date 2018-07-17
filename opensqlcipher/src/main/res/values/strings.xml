@@ -4,4 +4,17 @@
     <string name="setting_update_title">自动监听</string>
     <string name="setting_update_on">开启</string>
     <string name="setting_update_off">关闭</string>
+
+    <string name="setting_auto_send">自动发送数据</string>
+    <string name="setting_send_on">开启</string>
+    <string name="setting_send_off">关闭</string>
+
+    <string name="setting_server">服务器地址</string>
+    <string name="setting_server_add">http://118.31.8.64:20000/test</string>
+
+    <string name="setting_server_modify">编辑服务器地址</string>
+    <string name="setting_server_url">服务器URL</string>
+    <string name="cancel">取消</string>
+    <string name="confirm">确定</string>
+
 </resources>

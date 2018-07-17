@@ -24,7 +24,6 @@ public class ServiceUtil {
      * @return
      */
     public static boolean isServiceRunning(Context context, String serviceName) {
-
         boolean isRunning = false;
         ActivityManager am = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
         List<ActivityManager.RunningServiceInfo> lists = am.getRunningServices(30);

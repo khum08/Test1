@@ -10,6 +10,7 @@ import android.os.IBinder;
 import android.support.annotation.Nullable;
 import android.util.Log;
 
+import com.kotlin.khum.opensqlcipher.App;
 import com.kotlin.khum.opensqlcipher.R;
 import com.kotlin.khum.opensqlcipher.activity.MainActivity;
 import com.kotlin.khum.opensqlcipher.dao.MessageDao;
@@ -134,6 +135,8 @@ public class WxMonitorService extends Service {
                 //上传
                 if(list.size()!=0){
                     uploadData(list);
+                }else{
+                    Log.d(MONITOR_TAG, "no data");
                 }
             }
         }, 100, StaticField.interval);
@@ -145,9 +148,13 @@ public class WxMonitorService extends Service {
      * @param list
      */
     private void uploadData(ArrayList<Message> list) {
-        requestEntity.setData(list);
-        requestEntity.setUploadTime(System.currentTimeMillis());
-        RetrofitService.uploadPricing(requestEntity);
+        if(App.autoSend){
+            requestEntity.setData(list);
+            requestEntity.setUploadTime(System.currentTimeMillis());
+            RetrofitService.uploadPricing(App.serverUrl,requestEntity);
+        }else{
+            Log.d(MONITOR_TAG, "auto_send is not");
+        }
     }
 
     @Override
@@ -172,9 +179,10 @@ public class WxMonitorService extends Service {
         intent.setAction(ACTION_BROADCAST);
         sendBroadcast(intent);
 
-        //此处是否需要解除注册需要考虑
+        //此处解除注册后能否接收到上上面的广播，需要考虑
         unregisterReceiver(mStartReceiver);
     }
+
 }
 
 

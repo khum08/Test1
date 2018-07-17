@@ -10,4 +10,10 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style name="Dialog_edit" parent="android:style/Theme.Dialog">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
 </resources>

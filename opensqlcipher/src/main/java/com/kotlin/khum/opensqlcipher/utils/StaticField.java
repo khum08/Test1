@@ -9,6 +9,7 @@ package com.kotlin.khum.opensqlcipher.utils;
  */
 public interface StaticField {
 
+    //=============================== 自动监听 =========================================
     String ShareFileName = "WECHAT_LISTEN";
     String AutoListen = "AUTO_LISTEN";
     String MONITOR_TAG = "Monitor";
@@ -25,7 +26,12 @@ public interface StaticField {
     //================================ net =============================================
     String NET_TAG = "network";
     int DEFAULT_TIME_OUT = 10;
-    String baseUrl ="http://118.31.8.64:80/";
+    String baseUrl ="http://118.31.8.64:20000/test/";
 
+
+    //=============================== 自动发送=========================================
+    String AUTO_SEND = "AUTO_SEND";
+    //=============================== 服务器url=========================================
+    String SERVER_URL = "SERVER_URL";
 
 }
